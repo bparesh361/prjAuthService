@@ -1,0 +1,50 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:auth="http://cybage.com/auth/schemas"
+ elementFormDefault="qualified"
+	targetNamespace="http://cybage.com/auth/schemas" >
+	<xs:element name="AuthRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="username" type="xs:string"/>
+				<xs:element name="password" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AuthResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="key" type="xs:string"/>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	<xs:element name="RegisterRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="username" type="xs:string"/>
+				<xs:element name="password" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="msg" type="xs:string"/>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MathSqrtRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="number" type="xs:double"/>
+				<xs:element name="key" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MathSqrtResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="number" type="xs:double"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+</xs:schema>
